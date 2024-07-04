@@ -3,12 +3,11 @@
   align-items: center;
   justify-content: center;
   height: 63px;
-  box-shadow: 0px 2px 4px 0px #00000026;
-
-  &-image {
-    width: 162px;
-    height: 44px;
-  }
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+}
+.logo-image {
+  width: 162px;
+  height: 44px;
 }
 
 .recherche {
@@ -18,7 +17,7 @@
   align-items: center;
   height: 50px;
   background-color: #eaeaea;
-  box-shadow: 0px 4px 4px 0px #00000040;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
 }
 
 .input-recherche {
@@ -41,17 +40,10 @@
   border-radius: 25px;
   color: #fff;
   outline: 0;
-
-  &:hover {
-    background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%),
-      linear-gradient(
-        0deg,
-        rgba(255, 255, 255, 0.15),
-        rgba(255, 255, 255, 0.15)
-      );
-
-    transition: background ease-out 300ms;
-  }
+}
+.button-primary:hover {
+  background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  transition: background ease-out 300ms;
 }
 
 .fonctionnement {
@@ -68,21 +60,20 @@
   display: flex;
   gap: 12px;
   background-color: #f6f6f6;
-  box-shadow: 0px 4px 15px 0px #00000026;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
   border-radius: 20px;
   padding: 32px;
-
-  .circle {
-    position: absolute;
-    left: -12px;
-    top: 50%;
-    transform: translate(0, -50%);
-    width: 24px;
-    height: 24px;
-    border-radius: 100%;
-    background-color: #9356dc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+}
+.fonctionnement-card .circle {
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  background-color: #9356dc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
