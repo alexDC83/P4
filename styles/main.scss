@@ -1,8 +1,8 @@
-@import "./variaggbles.scss";
+@import "./variables.scss";
 @import "./mixins.scss";
 @import "./index.scss";
 @import "./shared.scss";
-@import "./layout/restaurants";
+@import "./eateries.scss";
 
 body {
   margin: 0;
@@ -24,6 +24,7 @@ a {
   text-decoration: none;
   color: black;
 }
+
 .menu img {
   width: 346px;
   height: 231px;

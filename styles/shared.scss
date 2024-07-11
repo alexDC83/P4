@@ -1,0 +1,115 @@
+header {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        margin: 0;
+        font-family: 'Shrikhand';
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 43.74px;
+        text-align: center;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+        padding-top: 14px;
+        padding-bottom: 5px;
+        z-index: 1;
+    }
+}
+
+.like {
+    position: relative;
+    width: 24px;
+
+    .fa-regular {
+        position: absolute;
+        color: black;
+        font-size: 24px;
+        transition: opacity 500ms;
+    }
+
+    .fa-solid {
+        position: absolute;
+        opacity: 0;
+        background-clip: text;
+        color: transparent;
+        font-size: 24px;
+        transition: opacity 500ms;
+        @include gradient-purple-to-pink;
+    }
+
+    &:hover {
+        .fa-regular {
+            opacity: 0;
+        }
+
+        .fa-solid {
+            opacity: 1;
+        }
+    }
+}
+
+footer {
+    background-color: $darkenGrey;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        margin: 0;
+        padding-left: 25px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        font-family: 'Shrikhand';
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 26.24px;
+    }
+
+    p {
+        margin: 0;
+        padding-left: 25px;
+        padding-bottom: 15px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 18.75px;
+
+        a {
+            color: $white;
+
+            .fa-utensils {
+                padding-right: 10px;
+            }
+
+            .fa-handshake-angle {
+                padding-right: 5px;
+            }
+        }
+
+        &.contact {
+            padding-bottom: 25px;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) {
+    footer {
+        flex-direction: row;
+        justify-content: flex-end;
+        height: 114px;
+
+        h2 {
+            width: 20%;
+            order: 2;
+            padding-bottom: 30px;
+            padding-top: 60px;
+            text-align: center;
+        }
+
+        p {
+            order: 1;
+            padding-top: 25px;
+            padding-bottom: 30px;
+            padding-top: 62px;
+        }
+    }
+}
