@@ -1,214 +1,287 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+header {
+  display: flex;
+  flex-direction: column;
+}
+header h1 {
   margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+  font-family: "Shrikhand";
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 43.74px;
+  text-align: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  padding-top: 14px;
+  padding-bottom: 5px;
+  z-index: 1;
 }
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 63px;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
-}
-.logo-image {
-  width: 162px;
-  height: 44px;
-}
-
-.recherche {
-  display: flex;
-  gap: 24px;
-  justify-content: center;
-  align-items: center;
+header .location {
   height: 50px;
   background-color: #eaeaea;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .location i {
+  width: 12px;
+  height: 16px;
+  margin-right: 17px;
+}
+header .location span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
 }
 
-.input-recherche {
-  background: transparent;
-  border: 0;
-  outline: 0;
+main.home {
+  background-color: #eaeaea;
 }
-
-.hero {
-  background-color: #f6f6f6;
-  padding: 32px 16px;
+main.home section.explore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 287.5px;
+  background-color: #f7f7f7;
+}
+main.home section.explore h2 {
+  line-height: 28.13px;
+  margin-top: 40px;
+  margin-right: 40px;
+  margin-left: 40px;
   text-align: center;
 }
-
-.button-primary {
-  border: 0;
-  width: 186px;
-  height: 50px;
-  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+main.home section.explore p {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21.09px;
+  margin-top: 0;
+  margin-left: 25px;
+  margin-right: 25px;
+  text-align: center;
+}
+main.home section.explore button {
+  background-image: linear-gradient(
+    193.33deg,
+    #9356dc -11.44%,
+    #ff79da 123.93%
+  );
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
-  color: #fff;
-  outline: 0;
-}
-.button-primary:hover {
-  background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
-  transition: background ease-out 300ms;
-}
-
-.fonctionnement {
-  background-color: #fff;
-  padding: 48px 20px;
-}
-
-.fonctionnement-wrapper {
-  padding: 48px 10px;
-}
-
-.fonctionnement-card {
-  position: relative;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  width: 218px;
+  height: 50px;
+  text-align: center;
   display: flex;
-  gap: 12px;
-  background-color: #f6f6f6;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
-  border-radius: 20px;
-  padding: 32px;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  transition: box-shadow 0.5s, opacity 0.5s, transform 0.5s;
+  margin-bottom: 40px;
 }
-.fonctionnement-card .circle {
-  position: absolute;
-  left: -12px;
-  top: 50%;
-  transform: translate(0, -50%);
+main.home section.explore button:hover {
+  opacity: 85%;
+  box-shadow: 4px 8px 10px 4px rgba(0, 0, 0, 0.25);
+  -ms-transform: scale(1.01);
+  /* IE 9 */
+  -webkit-transform: scale(1.01);
+  /* Safari 3-8 */
+  transform: scale(1.01);
+}
+main.home section.functioning {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+}
+main.home section.functioning h2 {
+  width: 100%;
+  padding-left: 40px;
+  line-height: 28px;
+}
+main.home section.functioning button {
+  position: relative;
+  width: 90%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 72.38px;
+  background-color: #f7f7f7;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 30px;
+}
+main.home section.functioning button .badge {
   width: 24px;
   height: 24px;
-  border-radius: 100%;
   background-color: #9356dc;
+  color: #ffffff;
+  font-size: 14.18px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  left: -12px;
+}
+main.home section.functioning button i {
+  color: #7e7e7e;
+  font-size: 19.9px;
+  position: absolute;
+  left: 8%;
+}
+main.home section.functioning button:hover i {
+  color: #9356dc;
+}
+
+.background--gray {
+  background-color: #ececec;
+}
+
+.restaurant__title {
+  font-size: 24px;
+  font-weight: 700;
+  padding: 40px 0 10px 20px;
+  margin: 0;
+}
+.restaurant-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-bottom: 50px;
+}
+
+.restaurant-card {
+  position: relative;
+  background: white;
+  height: 250px;
+  border-radius: 20px;
+  margin: 10px 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
+}
+.restaurant-card__link {
+  text-decoration: none;
+  color: #000;
+}
+.restaurant-card-image {
+  overflow: hidden;
+  height: 70%;
+}
+.restaurant-card-image__img {
+  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.restaurant-card-new {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  background: #99e2d0;
+  border-radius: 2px;
+}
+.restaurant-card-new__text {
+  font-size: 14px;
+  text-align: center;
+  color: #008766;
+  padding: 8px;
+}
+.restaurant-card-heading__title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 15px 0px 5px 15px;
+}
+.restaurant-card-heading__subtitle {
+  margin: 0px 0px 0px 15px;
+  font-size: 17px;
+  font-weight: 300;
+}
+.restaurant-card-heart {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+}
+.restaurant-card-heart:active .heart--solid {
+  opacity: 1;
+  transition: 0.3s ease-in;
+}
+.restaurant-card-heart:active .heart--light {
+  opacity: 0;
+  transition: 0.3s ease-in;
+}
+.restaurant-card-heart:hover .heart--solid {
+  opacity: 1;
+  transition: 0.3s ease-in;
+}
+.restaurant-card-heart:hover .heart--light {
+  opacity: 0;
+  transition: 0.3s ease-in;
+}
+
+.heart--light {
+  position: absolute;
+  opacity: 1;
+}
+.heart--solid {
+  background-image: linear-gradient(#9356dc, #ff79da);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .restaurant__title,
+  .restaurant-wrapper {
+    max-width: 1024px;
+    margin: auto;
+  }
+  .restaurant-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .restaurant-card {
+    width: 470px;
+    margin: 10px 20px;
+  }
+}
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.menu img {
+  width: 346px;
+  height: 231px;
+  top: -57px;
+  left: -3px;
+  gap: 0px;
+  opacity: 0px;
 }
