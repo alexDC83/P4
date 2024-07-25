@@ -10,7 +10,6 @@ header {
     i {
       font-size: 16px;
     }
-
   }
 }
 
@@ -71,7 +70,8 @@ header {
     flex-direction: column;
     justify-content: center;
 
-    @include desktop-responsive {}
+    @include desktop-responsive {
+    }
 
     @include tablet-responsive {
       display: flex;
@@ -92,7 +92,8 @@ header {
   flex-direction: column;
   justify-content: center;
 
-  @include desktop-responsive {}
+  @include desktop-responsive {
+  }
 
   @include tablet-responsive {
     display: flex;
@@ -137,7 +138,7 @@ header {
   overflow: hidden;
   cursor: pointer;
 
-  &:hover>&__checkout {
+  &:hover > &__checkout {
     margin-right: 0px;
 
     &::after {
