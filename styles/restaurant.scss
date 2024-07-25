@@ -38,30 +38,41 @@ header {
   padding: 2% 5% 5% 5%;
   z-index: 0;
 
+  @include desktop-responsive {
+    width: 60%;
+    margin: auto;
+  }
+
   &__heading {
     display: flex;
     align-items: center;
     margin: auto;
 
+    @include desktop-responsive {
+      width: auto;
+      justify-content: center;
+    }
+
     & .like {
       display: flex;
       justify-content: center;
       align-items: center;
+
+      @include desktop-responsive {
+        padding-left: 20px;
+      }
     }
 
     & h2 {
       width: 87%;
+      font-size: 28px;
       @include cursive-heading;
 
       @include desktop-responsive {
-        font-size: 40px;
-        width: 95%;
+        font-size: 28px;
+        width: auto;
       }
 
-      @include tablet-responsive {
-        font-size: 35px;
-        width: 95%;
-      }
     }
   }
 
@@ -70,14 +81,9 @@ header {
     flex-direction: column;
     justify-content: center;
 
-    @include desktop-responsive {
-    }
+    @include desktop-responsive {}
 
-    @include tablet-responsive {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+
   }
 
   &__orderbtn {
@@ -91,26 +97,49 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  animation: fadeIn 0.5s both;
+  opacity: 0;
 
-  @include desktop-responsive {
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(0px);
+    }
   }
 
-  @include tablet-responsive {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  &.delay-1 {
+    animation-delay: 500ms;
   }
+
+  &.delay-2 {
+    animation-delay: 1000ms;
+  }
+
+  &.delay-3 {
+    animation-delay: 1500ms;
+  }
+
+  @include desktop-responsive {}
+
 
   &__heading {
     position: relative;
     margin: 4% 0% 2% 0%;
     padding: 10px 0px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: map-get($font-weight, light);
     text-transform: uppercase;
 
     @include desktop-responsive {
-      font-size: 22px;
+      font-size: 16px;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     &::after {
@@ -138,7 +167,13 @@ header {
   overflow: hidden;
   cursor: pointer;
 
-  &:hover > &__checkout {
+  @include desktop-responsive {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &:hover>&__checkout {
     margin-right: 0px;
 
     &::after {
@@ -207,6 +242,10 @@ header {
     background-color: $color-tertiary;
     transition: margin-right 800ms cubic-bezier(0.63, 1.23, 0.96, 0.92);
 
+    @include desktop-responsive {
+      width: 15%;
+    }
+
     &::after {
       display: inline-block;
       margin: auto;
@@ -222,4 +261,12 @@ header {
 
 .order {
   @include button-purple;
+}
+
+body.resto {
+  footer {
+    @include desktop-responsive {
+      margin-top: -20px;
+    }
+  }
 }
