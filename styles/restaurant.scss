@@ -72,7 +72,6 @@ header {
         font-size: 28px;
         width: auto;
       }
-
     }
   }
 
@@ -81,9 +80,8 @@ header {
     flex-direction: column;
     justify-content: center;
 
-    @include desktop-responsive {}
-
-
+    @include desktop-responsive {
+    }
   }
 
   &__orderbtn {
@@ -124,8 +122,8 @@ header {
     animation-delay: 1500ms;
   }
 
-  @include desktop-responsive {}
-
+  @include desktop-responsive {
+  }
 
   &__heading {
     position: relative;
@@ -173,7 +171,7 @@ header {
     margin-right: auto;
   }
 
-  &:hover>&__checkout {
+  &:hover > &__checkout {
     margin-right: 0px;
 
     &::after {
